@@ -1,0 +1,56 @@
+/*
+ * ---------------------------------
+ * Student Name:Mubin Qureshi
+ * Student ID:180181900
+ * Student Email:qure1900@mylaurier.ca
+ * ---------------------------------
+ */
+
+#include "cqueue.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+cQueue* create_queue(int capacity){
+	cQueue *q = (cQueue*) malloc(sizeof(cQueue));
+
+	if (capacity < 1) {
+		printf("Error(create_queue): invalid cqueue capacity, set to 10\n");
+		capacity = 10;
+
+	}
+	q->capacity = capacity;
+	q->array = (Data*) malloc(sizeof(Data) * capacity);
+	q->front = -1;
+	q->rear = -1;
+	q->size = 0;
+
+	return q;
+}
+int is_empty_queue(cQueue *q){
+
+}
+int len_queue(cQueue *q){
+
+}
+int is_full_queue(cQueue *q){
+
+}
+int insert_queue(cQueue *q,Data* d){
+
+}
+Data* peek_queue(cQueue *q){
+
+}
+Data* remove_queue(cQueue *q){
+
+}
+void destroy_queue(cQueue *q){
+
+}
+void print_queue(cQueue *q){
+
+}
+int get_capacity_queue(cQueue *q){
+
+}

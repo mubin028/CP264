@@ -1,0 +1,67 @@
+/**
+ -------------------------
+ Student Name:Mubin Qureshi
+ Student ID:180181900
+ Student email:qure1900@mylaurier.ca
+ -------------------------
+ **/
+#include <stdio.h>
+void t1();
+void t2();
+void t3();
+
+int main(){
+	setbuf(stdout,NULL);
+	//t1();
+	printf("\n");
+	t2();
+	printf("\n");
+	//t3();
+}
+
+void t1(){
+	int tall,small,total;
+	double avg_height;
+	char symbol = 84;
+	const short val = 43.0;
+
+	printf("Enter number of tall trees: ");
+	scanf("%d", &tall);
+	printf("Enter number of short trees: ");
+	scanf("%d",&small);
+	total = tall + small;
+	//printing report
+	printf("Number of %c trees = %d\n", symbol, tall);
+	symbol = symbol - 1;
+	printf("Number of %c trees = %d\n",(symbol-1),small);
+	printf("Average height = %.2lf", (val / total));
+
+	return;
+}
+
+void t2(){
+	unsigned int year;
+	short month;
+	int day;
+	char university[30];
+
+	printf("Enter Year: ");
+	scanf("%i", &year);
+	printf("Enter Month: ");
+	scanf("%hu", &month);
+	printf("Enter day: ");
+	scanf("%d", &day);
+	printf("Enter University: ");
+	scanf("%s", &university);
+	printf("This is %s University \n",university);
+	printf("Today is :%d/%d/%d",day,month,year);
+	return;
+}
+
+void t3(){
+	printf("Hints for C Language:\n");
+	printf("Insert \"\n\" at end of printf for newline.\n");
+	printf("Use \""\"double quote" not 'single quotes' for strings.");
+	Use %d for integer, %f for float and %lf for double.
+	return;
+}

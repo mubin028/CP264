@@ -1,0 +1,188 @@
+/**
+ * -------------------------
+ * Student Name:Mubin Qureshi
+ * Student ID:180181900
+ * Student email:qure1900@mylaurier.ca
+ * -------------------------
+ */
+# include <stdio.h>
+# define True 1
+# define False 0
+# define SIZE 11
+
+int list[SIZE] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 }; //Global list
+
+/**
+ * --------------------------------------------------------
+ * Parameters:
+ * 		number of rounds (int)
+ * returns:
+ * 		total cost (double)
+ * Description:
+ * 		(for loop implementation)
+ * 		computes the total cost of purchses
+ * 		The function asks the user to enter number of items and unit price
+ * 		The above is repeated as many as "rounds" or if the user enters -1
+ * 		The total cost of all purchases is returned
+ * ----------------------------------------------------------
+ */
+
+double calc_price1(int rounds) {
+	//your code here
+	return 0.0;
+}
+
+/**
+ * --------------------------------------------------------
+ * Same as calc_price1 but with while loop implementation
+ * ----------------------------------------------------------
+ */
+
+double calc_price2(int rounds) {
+	//your code here
+	return 0.0;
+}
+
+/**
+ * --------------------------------------------------------
+ * Same as calc_price1 but with do-while loop implementation
+ * ----------------------------------------------------------
+ */
+
+double calc_price3(int rounds) {
+	int i = 0, num_items;
+	float unit_price;
+	const float TAX = 0.13;
+
+	for (int j=0;j<rounds;j++;) {
+				printf("Enter unit price  for item %d:",i+1);
+				scantf("%f",&unit_price);
+				printf("Enter number of units: ");
+				scantf("%d",&num_items);
+				item_total = (unit_price*num_items)+ (unit_price * num_items)*TAX;
+
+			}
+			return 0.0;
+		}
+
+
+/**
+ * --------------------------------------------------------
+ * Parameters:
+ * 		height and length of base (int)
+ * 		direction (char)
+ * 		drawing symbol (char)
+ * returns:
+ * 		None
+ * Description:
+ * 		Draws a triangle with equal height and base length
+ * 		Direction is either L or R
+ * 		The function uses given drawing symbol to draw triangle
+ * 		If direction is other than L or R, print error msg and return
+ * 		If length is negative, print error msg and return
+ * ----------------------------------------------------------
+ */
+void draw_triangle(int height, char direction, char symbol) {
+	//your code here
+	return;
+}
+
+//---------------------------------------------------------
+/**
+ * Parameters:
+ * 		size: number of elements to fill in the list (int)
+ * returns:
+ * 		None
+ * Description:
+ *    Initialize global list by filling items from 0 up to size
+ *    with integer values starting from 0. All other elements set to -1
+ *    If given size is negative or more than 10, print error msg and return
+ */
+void init(int size) {
+	//your code here
+	return;
+}
+
+//---------------------------------------------------------
+/**
+ * Parameters:
+ * 		None
+ * returns:
+ * 		length of global vector (int)
+ * Description:
+ *    Finds the length of the global vector, i.e. number of elements
+ *    length is defined as number of elements until -1 is found
+ *    Sample output1: list = {-1} --> 0
+ *    Sample output2: list = {1,2,3,-1}--> 3
+ */
+int len() {
+	//your code here
+	return 0;
+}
+
+//----------------------------------------------------
+/**
+ * Parameters:
+ * 		None
+ * returns:
+ * 		None
+ * Description:
+ *    prints the contents of the global list
+ *    The contents of the list up to (exclusive) of -1 should be printed
+ *    Sample output1: vector = {-1} --> []
+ *    Sample output2: vector = {1,2,3,-1}--> [1,2,3]
+ */
+void print() {
+	//your code here
+	return;
+}
+
+//----------------------------------------------------
+/**
+ * Parameters:
+ * 		value: an integer to be added to list (int)
+ * returns:
+ * 		None
+ * Description:
+ *    Appends the given value to the list
+ *    if list is full print an error message and return
+ */
+void append(int value) {
+	//your code here
+	return;
+}
+
+//----------------------------------------------------
+/**
+ * Parameters:
+ * 		pos: list index to insert new value at (int)
+ * 		value: an integer to be added to list (int)
+ * returns:
+ * 		None
+ * Description:
+ *    Inserts the given value at the given position in the list
+ *    if list is full or index out of range, print an error msg and return
+ */
+void insert(int pos, int value) {
+	//your code here
+	return;
+}
+
+//---------------------------------------------------------
+/**
+ * Parameters:
+ * 		None
+ * returns:
+ * 		None
+ * Description:
+ *    Reverse the contents of the global list
+ *    The function changes the contents of vector
+ *    Sample outputs:
+ *        vector = {1,2,-1} --> {2,1,-1}
+ *        vector = {1,2,5,10,-1} --> {10,5,2,1,-1}
+ *        vector = {-1} --> {-1}
+ */
+void reverse() {
+	//your code here
+	return;
+}

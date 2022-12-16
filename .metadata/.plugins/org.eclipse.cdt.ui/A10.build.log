@@ -1,0 +1,14 @@
+15:25:22 **** Incremental Build of configuration Release for project A10 ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o A10.o "..\\A10.c" 
+..\A10.c: In function 'find_node_heap_aux':
+..\A10.c:238:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   if (n->right != NULL)
+   ^~
+..\A10.c:240:4: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+    return n;
+    ^~~~~~
+gcc -o A10.exe A10.o A10_test.o data.o queue_array.o stack_array.o 
+
+15:25:23 Build Finished. 0 errors, 1 warnings. (took 557ms)
+

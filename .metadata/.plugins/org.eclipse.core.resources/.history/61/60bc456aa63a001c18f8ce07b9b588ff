@@ -1,0 +1,233 @@
+/*
+ * ---------------------------------
+ * Student Name:Mubin Qureshi
+ * Student ID:180181900
+ * Student Email:qure1900@mylaurier.ca
+ * ---------------------------------
+ */
+
+# include<stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <ctype.h>
+#include "A5.h"
+
+//---------------------- Task 1 ---------------------------------
+void get_file_stats(const char *filename, const char *filename2)  {
+	FILE *in_file = NULL;
+	in_file = fopen(filename, "r");
+
+	if (in_file == NULL) {
+		printf("Error(get_file_stats): Could not open file %s\n", filename);
+		return;
+	}
+	char c = fgetc(in_file);
+	int paragraphs = 0, lines = 0, words = 0, whiteSpaces = 0, characters = 0,
+			upper = 0, lower = 0, notAlpha = 0;
+
+	while (c != EOF) {
+		if (c == '\n') {
+			lines++;
+		}
+		if (c == ' ' || c =='\t' || c =='\n') {
+			whiteSpaces++;
+		}
+
+
+		if (isalpha((c))) {
+			if (isupper(c)) {
+				upper++;
+				characters++;
+
+			} else{
+				lower++;
+				characters++;
+			}
+		}
+
+		if (!isalpha(c)&& c != ' ' && c!='\n' && c != '\t'){
+			notAlpha++;
+			characters++;
+		}
+
+		c = fgetc(in_file);
+	}
+	fclose(in_file);
+	FILE *out_file = NULL;
+	out_file = fopen(filename2, "a");
+	fprintf(out_file,"Analyzing file %s:\n",filename);
+	fprintf(out_file,"#Paragraphs = %d \n",paragraphs);
+	fprintf(out_file,"#lines = %d \n",lines);
+	fprintf(out_file,"#words = 38 %d \n",words);
+	fprintf(out_file,"#characters = %d \n",characters);
+	fprintf(out_file,"#uppers = %d \n",upper);
+	fprintf(out_file,"#lowers = %d \n",lower);
+	fprintf(out_file,"#others = %d \n",notAlpha);
+	fprintf(out_file,"#spaces = %d \n",whiteSpaces);
+	fclose(out_file);
+
+	return;
+}
+
+//---------------------- Task 2 ---------------------------------
+void format_file1(const char *in_file, const char *out_file) {
+	FILE *open_file, *input_file;
+
+	input_file = fopen(in_file, "r"); // opening in_file in reading mode
+	open_file = fopen(out_file, "w"); // opening out_file in writing mode
+
+	char word[100]; // declaring a char array of 100 to read from file
+	int count_word = 0; // set count to 0
+
+	if (input_file == NULL) {
+			printf("Error(get_file_stats): Could not open file %s\n", in_file);
+			return;}
+
+
+
+//		// while file pointer doesn't reach eof
+//
+//	while (!feof(input_file)){
+//
+//		int empty = 0;
+//		fscanf(input_file, "%s", word); // read a word from input_file
+//		if (word == '/n') {
+//			if (empty % 2 == 0) {
+//				fprintf(open_file, "%s ", word); // write a word from input_file
+//			} else {
+//				empty++;
+//			}
+//
+//		} else if ()
+//
+//	}
+
+
+	fclose(open_file);
+	fclose(input_file);
+	return;
+}
+
+//---------------------- Task 3 ---------------------------------
+void format_file2(const char *in_file, const char *out_file)  {
+
+	FILE *fin, *fout;
+	    int bufferLength = 255;
+	    char line[bufferLength];
+	    int line_number = 1;
+	    fin = fopen(in_file, "r");
+	    fout = fopen(out_file, "w");
+
+	    if(fin == NULL || fout == NULL) {
+	        printf("An Error occured\n");
+	        return;
+	    }
+
+	    while(fgets(line, bufferLength, fin)) {
+	        fprintf(fout, "%d ", line_number++);
+	        for(int i = 0; line[i]; i++)
+	        {
+	            if(isalpha(line[i]) != 0) {
+	                fprintf(fout, "%c", line[i]);
+	            } else if(isdigit(line[i]) != 0) {
+	                fprintf(fout, "[%c]", line[i]);
+	            }
+	        }
+	        fprintf(fout, "\n");
+	    }
+
+	    return;
+	}
+
+//	FILE *fptr = NULL;
+//	FILE *out = NULL;
+//	fptr = fopen(in_file, "r");
+//	out = fopen(out_file, "w");
+//	int i = 1;
+//
+//	if (fptr == NULL) {
+//		printf("Error(get_file_stats): Could not open file %s\n", in_file);
+//		return;
+//	}
+//	char c =fgetc(fptr);
+//	char d = fgetc(out);
+//
+//	fseek(out,-1,SEEK_CUR);
+//	fprintf(out,"%d ",i);
+//	fseek(out,0,SEEK_CUR);
+//
+//		while (c != EOF) {
+//
+//			if (c == '\n'){
+//				i++;
+//				fseek(out,-1,SEEK_CUR);
+//				fprintf(out,"%d ",i);
+//
+//				fseek(out,0,SEEK_CUR);
+//
+//
+//			}
+//			c = fgetc(fptr);
+//			d = fgetc(out);
+//		}
+//
+//
+//
+//	return;
+
+
+//---------------------- Task 4 ---------------------------------
+void filter_by_area(const char *in_file, const char *out_file, float area_threshold) {
+
+	char cities[10];
+	char temp;
+	char city;
+	char populations[10];
+	char record[10];
+	int i = 0;
+
+	char *buffer1 = NULL, *buffer2 = NULL, *buffer3 = NULL;
+	FILE *in = NULL;
+	in = fopen(in_file, "r");
+	while (!feof(in)) {
+		fscanf(in, "%d", &temp);
+
+	buffer1 = strtok(temp, "f ");
+	buffer1 = strtok(NULL, " ");
+	fscanf(buffer1, "%s", city);
+	printf("%s", city);
+	}
+
+return;
+
+}
+
+//---------------------- Task 5 ---------------------------------
+void replace_two_chars(const char *filename, char *str1, char* str2) {
+	 FILE* fp_read = NULL; //read operation
+
+
+	    fp_read = fopen(filename, "r+");
+
+	char buffer[1000];
+	    while (fgets(buffer, 1000, fp_read) != NULL)
+	    {
+	        //if match is found replace it
+	        for (int i = 0; buffer[i] != '\0'; i++)
+	        {
+	            //if two characters are equal to str1 : replace them with str2
+	            if (buffer[i] == str1[0] && buffer[i + 1] == str1[1])
+	            {
+	            	fseek(fp_read,-1,SEEK_CUR);
+	            	fprintf(fp_read, str2);
+	            	fseek(fp_read,0,SEEK_CUR);
+	                i++; //move one step extra
+	            }
+	            else //if not equal : just copy the current character
+	            {
+	                fputc(buffer[i], fp_read);
+	            }
+	        }
+	    }
+	    return;
+}

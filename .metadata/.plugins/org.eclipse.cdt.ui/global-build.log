@@ -1,0 +1,10 @@
+11:03:58 **** Incremental Build of configuration Release for project Final ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o final.o "..\\final.c" 
+gcc -o Final.exe data_structures.o final.o final_test.o 
+11:04:00 **** Incremental Build of configuration Debug for project Final ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o final_test.o "..\\final_test.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o final.o "..\\final.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o data_structures.o "..\\data_structures.c" 
+gcc -o Final.exe data_structures.o final.o final_test.o 

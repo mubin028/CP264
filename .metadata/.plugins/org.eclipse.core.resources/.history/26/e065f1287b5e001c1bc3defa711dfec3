@@ -1,0 +1,140 @@
+/**
+ * ---------------------------------
+ * Student Name:Mubin Qureshi
+ * Student ID:180181900
+ * Student Email:qure1900@mylaurier.ca
+ * ---------------------------------
+ */
+
+/**
+ * ---------------------------------
+ *
+ * Put your academic honesty certification
+ * in this box
+ *I certify that I completed this final exam according to academic honesty guidelines. I attest that
+I did not use any external help, neither in person nor virtually. I understand that plagiarizing will
+lead to my failure in the course, in addition to other penalties according to the University
+policies.
+ * ---------------------------------
+ */
+
+/**
+ * ---------------------------------
+ *
+ * If you have any comments to the instructor
+ * put it in this box
+ *
+ * ---------------------------------
+ */
+ 
+# include <stdio.h>
+# include <stdlib.h>
+# include <assert.h>
+# include "final.h"
+# include "data_structures.h"
+
+//--------------- Task 1 -----------------------
+Stack* sort_stacks(Stack *stacks[5], const int size){
+	//your solution 
+	return NULL;
+}
+
+//--------------- Task 2 -----------------
+int delete_mid_list(List* list){
+
+	if(is_empty_list(list)){
+		printf("Error(delete_mid_list): empty list\n");
+		return -1;
+	}
+
+	int cut=list->size/2;
+	if (list->size % 2 ==0&& cut != 0){
+		cut = cut -1;
+	}
+	//printf("%d\n",cut);
+
+	int x = 0;
+	Node *previous = NULL;
+	Node *current = list->head;
+
+
+	if (list->size==1){
+
+		list->head = NULL;
+
+		list->size--;
+		destroy_node(&current);
+		return cut;
+
+	}
+
+	if (list->size==2){
+		list->head=current->next;
+		destroy_node(&current);
+		list->size--;
+		return cut;
+
+	}
+
+	while (x<cut) {
+		previous = current;
+		current = current->next;
+		x++;
+	}
+
+	if (list->size == 1)
+		list->head = NULL;
+	else if (cut ==list->size-1)
+		previous->next = NULL;
+	else
+		previous->next=current->next;
+
+	if (list->size==2){
+		list->head=current->next;
+	}
+	destroy_node(&current);
+	list->size--;
+
+	return cut;
+}
+//-------------- Task 3 ------------------
+MData* create_mdata(void *item, char type) {
+
+
+	if (!item){
+		printf("Error(create_mdata): invalid pointer\n");
+		return NULL;
+	}
+
+	if (type =='i'){
+
+
+	}
+
+	else if (type =='p'){
+
+		}
+	else{
+		printf("Error(create_mdata): invalid data type\n");
+	}
+
+
+	//your solution
+	return NULL;
+}
+
+void destroy_mdata(MData **d) {
+	//your solution
+	return;
+}
+
+void print_mdata(MData *d) {
+	//your solution
+	return;
+}
+
+MData* copy_mdata(MData *d) {
+	//your solution
+	return NULL;
+}
+//----------------------------------

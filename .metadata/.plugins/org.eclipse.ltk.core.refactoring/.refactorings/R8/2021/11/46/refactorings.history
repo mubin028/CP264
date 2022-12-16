@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;R8/cQueue.c&apos; to &apos;cqueue.c&apos;" description="Rename resource &apos;cQueue.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="cQueue.c" name="cqueue.c" stamp="1636598554024" updateReferences="true"/>
+</session>

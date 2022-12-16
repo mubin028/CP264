@@ -1,0 +1,10 @@
+15:25:25 **** Incremental Build of configuration Debug for project R9 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o A5.o "..\\A5.c" 
+..\A5.c:13:16: fatal error: A5.h: No such file or directory
+ #include "A5.h"
+                ^
+compilation terminated.
+
+15:25:25 Build Failed. 1 errors, 0 warnings. (took 150ms)
+

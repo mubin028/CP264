@@ -1,0 +1,29 @@
+15:25:24 **** Incremental Build of configuration Debug for project R8 ****
+Info: Internal Builder is used for build
+gcc -o R8.exe R8_test.o cqueue.o process.o queue_array.o 
+R8_test.o: In function `test_queue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../R8_test.c:74: undefined reference to `print_data'
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../R8_test.c:80: undefined reference to `print_data'
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../R8_test.c:89: undefined reference to `print_data'
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../R8_test.c:107: undefined reference to `print_data'
+cqueue.o: In function `insert_cqueue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../cqueue.c:55: undefined reference to `copy_data'
+cqueue.o: In function `peek_cqueue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../cqueue.c:67: undefined reference to `copy_data'
+cqueue.o: In function `destroy_cqueue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../cqueue.c:79: undefined reference to `destroy_data'
+queue_array.o: In function `insert_queue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../queue_array.c:64: undefined reference to `copy_data'
+queue_array.o: In function `peek_queue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../queue_array.c:88: undefined reference to `copy_data'
+queue_array.o: In function `remove_queue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../queue_array.c:99: undefined reference to `copy_data'
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../queue_array.c:101: undefined reference to `destroy_data'
+queue_array.o: In function `destroy_queue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../queue_array.c:119: undefined reference to `destroy_data'
+queue_array.o: In function `print_queue':
+C:\Users\mubin\OneDrive\Desktop\CP264\R8\Debug/../queue_array.c:144: undefined reference to `print_data'
+collect2.exe: error: ld returned 1 exit status
+
+15:25:25 Build Failed. 13 errors, 0 warnings. (took 198ms)
+

@@ -1,0 +1,31 @@
+17:36:01 **** Incremental Build of configuration Debug for project A9 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o list.o "..\\list.c" 
+In file included from ..\list.c:12:0:
+..\list.h:5:0: warning: "True" redefined
+ # define True 1
+ 
+In file included from ..\data.h:10:0,
+                 from ..\list.h:4,
+                 from ..\list.c:12:
+..\process.h:11:0: note: this is the location of the previous definition
+ #define True 1;
+ 
+In file included from ..\list.c:12:0:
+..\list.h:6:0: warning: "False" redefined
+ # define False 0
+ 
+In file included from ..\data.h:10:0,
+                 from ..\list.h:4,
+                 from ..\list.c:12:
+..\process.h:12:0: note: this is the location of the previous definition
+ #define False 0;
+ 
+..\list.c: In function 'intersection_list':
+..\list.c:568:8: warning: implicit declaration of function 'compare_data' [-Wimplicit-function-declaration]
+    if (compare_data(d1,d2)==0){
+        ^~~~~~~~~~~~
+gcc -o A9.exe A9_test.o data.o list.o process.o 
+
+17:36:01 Build Finished. 0 errors, 3 warnings. (took 549ms)
+

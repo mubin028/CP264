@@ -1,0 +1,7 @@
+11:04:46 **** Incremental Build of configuration Debug for project R12 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o graph.o "..\\graph.c" 
+gcc -o R12.exe graph.o graph_components.o test_graph.o 
+
+11:04:46 Build Finished. 0 errors, 0 warnings. (took 541ms)
+

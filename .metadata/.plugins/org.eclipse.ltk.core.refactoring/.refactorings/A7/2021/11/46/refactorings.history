@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;A7/pqueue_template.txt&apos; to &apos;pqueue.c&apos;" description="Rename resource &apos;pqueue_template.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="pqueue_template.txt" name="pqueue.c" stamp="1636762502665" updateReferences="true"/>
+</session>

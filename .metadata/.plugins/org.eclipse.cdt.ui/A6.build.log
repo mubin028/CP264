@@ -1,0 +1,31 @@
+15:25:23 **** Incremental Build of configuration Debug for project A6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o A6.o "..\\A6.c" 
+In file included from ..\data.h:10:0,
+                 from ..\stack_array.h:14,
+                 from ..\A6.h:4,
+                 from ..\A6.c:12:
+..\process.h:11:0: warning: "True" redefined
+ #define True 1;
+ 
+In file included from ..\A6.h:4:0,
+                 from ..\A6.c:12:
+..\stack_array.h:11:0: note: this is the location of the previous definition
+ #define True 1
+ 
+In file included from ..\data.h:10:0,
+                 from ..\stack_array.h:14,
+                 from ..\A6.h:4,
+                 from ..\A6.c:12:
+..\process.h:12:0: warning: "False" redefined
+ #define False 0;
+ 
+In file included from ..\A6.h:4:0,
+                 from ..\A6.c:12:
+..\stack_array.h:12:0: note: this is the location of the previous definition
+ #define False 0
+ 
+gcc -o A6.exe A6.o A6_test.o data.o process.o stack_array.o 
+
+15:25:23 Build Finished. 0 errors, 2 warnings. (took 399ms)
+

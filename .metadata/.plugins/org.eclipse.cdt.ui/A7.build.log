@@ -1,0 +1,17 @@
+15:25:23 **** Incremental Build of configuration Debug for project A7 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o process.o "..\\process.c" 
+..\process.c: In function 'get_process_info':
+..\process.c:79:31: warning: format '%lu' expects argument of type 'long unsigned int', but argument 5 has type 'unsigned int' [-Wformat=]
+  sprintf(process, "[%u](%lu,%lu)", p->arrival, p->PID, p->time);
+                               ^
+..\process.c: At top level:
+..\process.c:109:18: error: unknown type name 'Data'
+ int compare_data(Data *d1, Data *d2) {
+                  ^~~~
+..\process.c:109:28: error: unknown type name 'Data'
+ int compare_data(Data *d1, Data *d2) {
+                            ^~~~
+
+15:25:23 Build Failed. 2 errors, 1 warnings. (took 155ms)
+

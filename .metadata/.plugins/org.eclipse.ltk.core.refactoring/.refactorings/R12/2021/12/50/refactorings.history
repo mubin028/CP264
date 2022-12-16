@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;R12/graph_components_template.txt&apos; to &apos;graph_components.c&apos;" description="Rename resource &apos;graph_components_template.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="graph_components_template.txt" name="graph_components.c" stamp="1638899057911" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;R12/graph_template.txt&apos; to &apos;graph.c&apos;" description="Rename resource &apos;graph_template.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="graph_template.txt" name="graph.c" stamp="1638909074571" updateReferences="true"/>
+</session>
